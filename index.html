@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Mapas de peligrosidad</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f4f7;
+    color: #1a1a1a;
+}
+
+.banner {
+    background-color: #6fb3e6;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner h1 {
+    font-size: 40px;
+    margin: 0;
+    color: white;
+    letter-spacing: 1px;
+}
+
+
+.container {
+    width: 80%;
+    margin: 40px auto;
+}
+
+.description {
+    background: white;
+    padding: 25px;
+    border-left: 6px solid #2a7fc1;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.selector {
+    margin-bottom: 25px;
+}
+
+select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #2a7fc1;
+    background: white;
+    cursor: pointer;
+}
+
+.contenedor-mapa {
+    background: white;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="banner">
+    <h1>Mapas de las Escuelas de LP T.G.C.R</h1>
+</div>
+
+<div class="container">
+
+    <div class="description">
+        <p>
+	Escuelas de la cuidad de la Plata en zonas de peligrosidad hidrica.
+        </p>
+    </div>
+
+    <div class="selector">
+        <label for="seleccionarMapa"><strong>Seleccionar mapa:</strong></label><br><br>
+        <select id="seleccionarMapa" onchange="cambiarMapa()">
+            <option value="https://www.google.com/maps/d/u/1/embed?mid=1UHR3QdhG1VqZsh0z1Bt85wc5oYjRWro&ehbc=2E312F" width="640" height="480"></iframe>Echeverry</option>
+            <option value="https://www.google.com/maps/d/u/1/embed?mid=1BvvR19L1dNRtxn2-QpsyxtAcETRdZUc&ehbc=2E312F" width="640" height="480"></iframe>Correas</option>
+            <option value="https://www.google.com/maps/d/u/1/embed?mid=1ItINjKTwoGKQo_hFKKroGh8IM1F8J7w&ehbc=2E312F" width="640" height="480"></iframe>Arana</option>
+            <option value="https://www.google.com/maps/d/u/1/embed?mid=1jGTTIG2yniYPhgAGY8mxkJkdsIpj04U&ehbc=2E312F" width="640" height="480"></iframe>Altos de San Lorenzo</option>
+            <option value="https://www.google.com/maps/d/u/1/embed?mid=1-o2AdjppryNFYuv--j7z6CQcQWmL6jU&ehbc=2E312F" width="640" height="480"></iframe>Tolosa</option>
+            <option value="https://www.google.com/maps/d/u/1/embed?mid=1tRumIHFoFDY4kjHtfgxhNvXQ_fFy7Q8&ehbc=2E312F" width="640" height="480"></iframe>Ringuelet</option>
+            <option value="https://www.google.com/maps/d/u/1/embed?mid=1X94cMpOEgl0mlQIjVYzfOyx12Fmfda0&ehbc=2E312F" width="640" height="480"></iframe>Abasto/option>
+            <option value="https://www.google.com/maps/d/u/1/embed?mid=1d0oNTGjSUEq7o8XVpbS50AgH_OaBxBM&ehbc=2E312F" width="640" height="480"></iframe>El Peligro</option>
+            <option value="https://www.google.com/maps/d/u/1/embed?mid=1LcU5VhOOTmX8qxmK_AMwbNpc_alzmBU&ehbc=2E312F" width="640" height="480"></iframe>Arturo Seguí</option>
+            <option value="https://www.google.com/maps/d/u/1/embed?mid=1M5g4DznGviiKvedCBvS_sD5pAIKwjc8&ehbc=2E312F" width="640" height="480"></iframe>Villa Elisa</option>
+            <option value="https://www.google.com/maps/d/u/1/embed?mid=1oyWpCp87Yegvcplmk_7V8x_miFtbDUc&ehbc=2E312F" width="640" height="480"></iframe>Gorina</option>
+            <option value="https://www.google.com/maps/d/u/1/embed?mid=10qdQcMlBwVP_21VZlNDOQd0Pd9jgHgA&ehbc=2E312F" width="640" height="480"></iframe>Gonnet</option>
+            <option value="https://www.google.com/maps/d/embed?mid=1Xk4p73dwsyERcnABh2enbFNg4DxSka8&ehbc=2E312F"     width="640" height="480"></iframe>Hernández</option>
+            <option value="https://www.google.com/maps/d/u/0/embed?mid=1Cnbk-00XTtdDjPAJV0UVnUIH6q_wWCk&ehbc=2E312F" width="640" height="480"></iframe>Olmos / El Retiro</option>
+            <option value="https://www.google.com/maps/d/u/0/embed?mid=1Qts7ZjvD0f1NsxFiXuULXE_j-E7iRVY&ehbc=2E312F" width="640" height="480"></iframe>City Bell</option>
+            <option value="https://www.google.com/maps/d/u/0/embed?mid=1eC9VI9gedw5G5gjpMNV8X83PmxdrzIE&ehbc=2E312F" width="640" height="480"></iframe>Villa Elvira</option>
+            <option value="https://www.google.com/maps/d/u/0/embed?mid=1mQ_DxIxfwfu7gt_vhDzdcCtOIYFEOVY&ehbc=2E312F" width="640" height="480"></iframe>San Carlos</option>
+            <option value="https://www.google.com/maps/d/u/0/embed?mid=1UvKeLnsybRgNL3t38ovTUD0UXtLrYBI&ehbc=2E312F" width="640" height="480"></iframe>Melchor Romero</option>
+            <option value="https://www.google.com/maps/d/u/0/embed?mid=17nN7llFOY_doIwl6dX1ARZm6w_Xq09k&ehbc=2E312F" width="640" height="480"></iframe>Los Hornos</option>
+            <option value="https://www.google.com/maps/d/u/0/embed?mid=1jAs8hudfVNdnKrk722CEMq9B7xotgK8&ehbc=2E312F" width="640" height="480"></iframe>Casco Urbano</option>
+        </select>
+    </div>
+
+    <div class="contenedor-mapa">
+        <iframe id="bordeMapa"
+                src="https://www.google.com/maps/d/u/1/embed?mid=1UHR3QdhG1VqZsh0z1Bt85wc5oYjRWro&ehbc=2E312F"
+                allowfullscreen>
+        </iframe>
+    </div>
+
+</div>
+
+<script>
+function cambiarMapa() {
+    var select = document.getElementById("seleccionarMapa");
+    document.getElementById("bordeMapa").src = select.value;
+}
+</script>
+
+</body>
+</html>
